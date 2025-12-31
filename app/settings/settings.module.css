@@ -1,0 +1,63 @@
+.container {
+  min-height: 100vh;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.title {
+  font-size: 2rem;
+  color: #22c55e;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.label {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  color: #d1d5db;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 0.5rem;
+}
+
+.primaryBtn {
+  margin-top: 1.5rem;
+  padding: 12px;
+  background: #22c55e;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.primaryBtn:hover {
+  background: #16a34a;
+}
+
+.error {
+  margin-top: 1rem;
+  color: #ef4444;
+  text-align: center;
+}
+
+.success {
+  margin-top: 1rem;
+  color: #4ade80;
+  text-align: center;
+}
+
+.loading {
+  color: white;
+  text-align: center;
+  margin-top: 50vh;
+}

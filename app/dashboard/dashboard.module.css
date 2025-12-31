@@ -1,0 +1,78 @@
+.page {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #02150f, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* الصندوق لي فالوسط */
+.centerBox {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+/* LOGO */
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: #00ff9c;
+  margin-bottom: 20px;
+}
+
+/* TEXT */
+.subtitle {
+  font-size: 16px;
+  color: #c9fff0;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+/* ACTIONS */
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* CARDS */
+.card {
+  background: linear-gradient(135deg, #0d3d2e, #0a2f23);
+  border-radius: 26px;
+  padding: 45px 35px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 0 15px 40px rgba(0, 255, 156, 0.25);
+  border: 2px solid transparent;
+}
+
+/* 🔴 Hover = إنارة حمراء */
+.card:hover {
+  transform: translateY(-12px) scale(1.04);
+  box-shadow:
+    0 0 25px rgba(255, 0, 0, 0.6),
+    0 0 60px rgba(255, 0, 0, 0.4);
+  border: 2px solid #ff2b2b;
+}
+
+/* ICON */
+.icon {
+  font-size: 42px;
+  margin-bottom: 18px;
+  display: block;
+}
+
+/* TEXT داخل الكارت */
+.card h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #00ff9c;
+}
+
+.card p {
+  font-size: 14px;
+  color: #b6fff0;
+}
