@@ -1,5 +1,7 @@
-import { redirect } from 'next/navigation'
-
 export default function Home() {
-  redirect('/auth')
+  return (
+    <div style={{ color: 'white', padding: 40 }}>
+      <h1>JOBLY is working ✅</h1>
+    </div>
+  )
 }
