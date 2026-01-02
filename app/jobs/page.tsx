@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import styles from './jobs.module.css'
 
 const jobs = [
@@ -31,8 +32,10 @@ export default function JobsPage() {
           <h3>{job.title}</h3>
           <p>{job.description}</p>
           <span className={styles.city}>{job.city}</span>
-          <br />
-          <button className={styles.button}>تواصل</button>
+
+          <Link href={`/jobs/${job.id}`} className={styles.button}>
+            تواصل
+          </Link>
         </div>
       ))}
     </main>

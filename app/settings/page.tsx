@@ -7,7 +7,8 @@ import styles from './settings.module.css'
 export default function SettingsPage() {
   const [loading, setLoading] = useState(true)
   const [name, setName] = useState('')
-  const [role, setRole] = useState<'client' | 'worker' | ''>('')
+  const [isClient, setIsClient] = useState(false)
+  const [isWorker, setIsWorker] = useState(false)
   const [message, setMessage] = useState<string | null>(null)
   const [error, setError] = useState<string | null>(null)
 
@@ -25,7 +26,7 @@ export default function SettingsPage() {
 
       const { data, error } = await supabase
         .from('profiles')
-        .select('full_name, role')
+        .select('full_name, is_client, is_worker')
         .eq('id', user.id)
         .single()
 
@@ -33,7 +34,8 @@ export default function SettingsPage() {
         setError('ما قدرناش نجيبو المعلومات')
       } else if (data) {
         setName(data.full_name || '')
-        setRole(data.role || '')
+        setIsClient(data.is_client)
+        setIsWorker(data.is_worker)
       }
 
       setLoading(false)
@@ -61,7 +63,8 @@ export default function SettingsPage() {
       .from('profiles')
       .update({
         full_name: name,
-        role,
+        is_client: isClient,
+        is_worker: isWorker,
       })
       .eq('id', user.id)
 
@@ -74,9 +77,7 @@ export default function SettingsPage() {
     setLoading(false)
   }
 
-  if (loading) {
-    return <p className={styles.loading}>جاري التحميل...</p>
-  }
+  if (loading) return <p className={styles.loading}>جاري التحميل...</p>
 
   return (
     <div className={styles.container}>
@@ -87,21 +88,27 @@ export default function SettingsPage() {
         className={styles.input}
         value={name}
         onChange={(e) => setName(e.target.value)}
-        placeholder="الاسم الكامل"
       />
 
-      <label className={styles.label}>الدور</label>
-      <select
-        className={styles.input}
-        value={role}
-        onChange={(e) =>
-          setRole(e.target.value as 'client' | 'worker')
-        }
-      >
-        <option value="">اختار الدور</option>
-        <option value="client">Client</option>
-        <option value="worker">Worker</option>
-      </select>
+      <label className={styles.label}>شنو كتدير؟</label>
+
+      <label>
+        <input
+          type="checkbox"
+          checked={isClient}
+          onChange={() => setIsClient(!isClient)}
+        />
+        كنقلب على خدمة
+      </label>
+
+      <label>
+        <input
+          type="checkbox"
+          checked={isWorker}
+          onChange={() => setIsWorker(!isWorker)}
+        />
+        كنقدّم خدمة
+      </label>
 
       <button
         onClick={saveProfile}

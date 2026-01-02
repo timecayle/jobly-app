@@ -1,62 +1,64 @@
 .container {
-  padding: 50px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f6f7f9;
   min-height: 100vh;
+  padding: 60px;
+  background: #0e0e0e; /* noir */
+  color: #eaeaea;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 .title {
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 38px;
+  font-weight: 800;
   margin-bottom: 40px;
-  color: #1a1a1a;
+  color: #7CFF9B; /* أخضر فاتح */
+  text-align: center;
 }
 
 .card {
-  background: white;
-  border-radius: 14px;
-  padding: 24px;
-  margin-bottom: 24px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  border-left: 6px solid #2ecc71; /* أخضر */
+  background: #151515;
+  border-radius: 18px;
+  padding: 26px;
+  margin-bottom: 28px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+  border-left: 5px solid #ff4d4d; /* أحمر */
 }
 
 .card h3 {
-  margin: 0 0 10px;
-  font-size: 22px;
-  color: #2c3e50;
+  margin: 0 0 12px;
+  font-size: 24px;
+  color: #7CFF9B;
 }
 
 .card p {
-  margin: 0 0 14px;
-  color: #555;
+  margin: 0 0 16px;
+  color: #cfcfcf;
   line-height: 1.6;
 }
 
 .city {
   display: inline-block;
-  background: #eafaf1;
-  color: #27ae60;
-  padding: 4px 10px;
+  background: rgba(124, 255, 155, 0.15);
+  color: #7CFF9B;
+  padding: 6px 14px;
   border-radius: 20px;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .button {
-  margin-top: 18px;
-  padding: 10px 22px;
-  background: #e74c3c; /* أحمر */
-  color: white;
-  border: none;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #ff4d4d, #7CFF9B);
+  color: #0e0e0e;
   border-radius: 30px;
   font-size: 15px;
-  font-weight: 600;
-  cursor: pointer;
+  font-weight: 700;
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .button:hover {
-  background: #c0392b;
-  transform: translateY(-2px);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(124, 255, 155, 0.4);
 }

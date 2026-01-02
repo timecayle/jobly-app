@@ -1,0 +1,80 @@
+.container {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: #0f0f0f; /* noir */
+  color: #e8f5e9; /* أخضر فاتح */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-size: 38px;
+  font-weight: 800;
+  color: #2ecc71; /* أخضر */
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #b2f2bb;
+  margin-bottom: 40px;
+}
+
+.card {
+  max-width: 500px;
+  margin: auto;
+  background: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  border-top: 5px solid #e74c3c; /* أحمر */
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  margin-top: 18px;
+  font-weight: 600;
+  color: #2ecc71;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #111;
+  color: white;
+  font-size: 15px;
+}
+
+.textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #777;
+}
+
+.button {
+  width: 100%;
+  margin-top: 30px;
+  padding: 14px;
+  background: linear-gradient(135deg, #2ecc71, #e74c3c);
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
